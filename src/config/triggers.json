@@ -1,0 +1,17 @@
+{
+  "triggers": [
+    {
+      "id": "example-trigger",
+      "enabled": true,
+      "channelIds": [],
+      "substring": "hello bot",
+      "caseSensitive": false,
+      "responses": [
+        "Hey there!",
+        "Hello!",
+        "Hi! How can I help?",
+        "Greetings!"
+      ]
+    }
+  ]
+}
