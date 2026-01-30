@@ -50,7 +50,15 @@ npm run build
 npm start
 ```
 
-## Beads Commands
+## Beads Workflow
+
+**IMPORTANT**: Beads is git-backed. Always keep bead state aligned with repo state:
+
+1. **Before committing**: Close any beads that are completed by the commit
+2. **Include bead changes in commits**: The `.beads/` folder changes should be part of the same commit as the code changes
+3. **Never commit code without updating beads**: If a feature is done, close the bead first, then commit both together
+
+### Beads Commands
 
 ```bash
 # See tasks ready to work on
@@ -61,6 +69,9 @@ bd create "Task title" -p 1
 
 # Show task details
 bd show <task-id>
+
+# Close a completed task
+bd close <task-id> --reason "Reason for closing"
 ```
 
 ## Project Structure
