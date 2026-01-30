@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: posthog-discord-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: CLIENT_ID
+        sync: false
+      - key: NODE_ENV
+        value: production
